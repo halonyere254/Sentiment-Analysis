@@ -34,7 +34,7 @@ df <- df %>%
 
 # Tokenize the responses
 df_tokens <- df %>% 
-  unnest_tokens(word, interviewer) 
+  unnest_tokens(word, interviewee) 
 # Calculate sentiment using a lexicon (e.g., bing)
 df_sentiment <- df_tokens %>%
   inner_join(get_sentiments("bing")) %>%
